@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  chat-app:
+    build:
+      context: .
+    image: juliano/chat-socket-app:1.0
+    ports:
+      - "3000:3000"
