@@ -39,7 +39,6 @@ A partir do AWS Cloud9, as seguintes práticas foram executadas:
 - 📦 **Configuração da infraestrutura como código (IaC)**, utilizando serviços como:
   - AWS Elastic Beanstalk
   - Amazon EC2
-  - Amazon S3
 - 🚀 **Deploy da aplicação** em um ambiente de execução na AWS.
 - 🌐 Verificação de que a aplicação estava acessível via navegador.
 - 📝 Documentação dos passos realizados em um `README.md`, incluindo:
@@ -65,14 +64,42 @@ A atividade proporcionou uma **experiência prática completa** de como preparar
 ├── README.md  ← este arquivo
 └── template.yaml  ← (opcional) IaC com AWS SAM ou CloudFormation
 
+# 🚀 Deploy de Aplicação na AWS com Docker e Elastic Beanstalk
 
-# socket.io
+Este documento descreve passo a passo como foi realizado o deploy de uma aplicação Node.js utilizando Docker no ambiente da AWS, através do AWS Cloud9 e Elastic Beanstalk.
 
-[![Latest NPM version](https://img.shields.io/npm/v/socket.io.svg)](https://www.npmjs.com/package/socket.io)
-[![Build status](https://github.com/socketio/socket.io/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/socketio/socket.io/actions/workflows/ci.yml)
-[![Downloads per month](https://img.shields.io/npm/dm/socket.io.svg)]((https://www.npmjs.com/package/socket.io))
+---
 
+## 👨‍💻 Pré-requisitos
 
-## License
+Antes de iniciar, certifique-se de que:
 
-[MIT](https://opensource.org/licenses/MIT)
+- Você possui uma conta AWS ativa.
+- O ambiente **AWS Cloud9** está configurado e acessível.
+- O repositório da aplicação foi clonado corretamente no Cloud9.
+
+---
+
+## ⚙️ Etapas do Deploy
+
+### ✅ Passo 1 – Criar os arquivos do Docker
+
+No diretório raiz da aplicação, crie os arquivos necessários para utilizar o Docker:
+
+#### `Dockerfile`
+
+```dockerfile
+FROM node:18
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+CMD ["node", "server.js"]
+
+### Exeucutando
+- npm install
+- eb init
+- eb create nome-do-ambiente
+- npm start
+- CTRL + C encerrar servidor
+
