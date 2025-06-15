@@ -50,20 +50,6 @@ A partir do AWS Cloud9, as seguintes práticas foram executadas:
 ## 🎯 Conclusão
 
 A atividade proporcionou uma **experiência prática completa** de como preparar, adaptar e implantar uma aplicação na nuvem de forma organizada, seguindo **boas práticas de DevOps** e utilizando os recursos gratuitos fornecidos pela AWS por meio do ambiente educacional **Learner Lab**.
-
----
-
-## 📁 Estrutura Recomendada do Repositório
-
-```bash
-├── .elasticbeanstalk/
-├── app/
-│   └── index.js
-├── .gitignore
-├── package.json
-├── README.md  ← este arquivo
-└── template.yaml  ← (opcional) IaC com AWS SAM ou CloudFormation
-
 # 🚀 Deploy de Aplicação na AWS com Docker e Elastic Beanstalk
 
 Este documento descreve passo a passo como foi realizado o deploy de uma aplicação Node.js utilizando Docker no ambiente da AWS, através do AWS Cloud9 e Elastic Beanstalk.
@@ -102,4 +88,18 @@ CMD ["node", "server.js"]
 - eb create nome-do-ambiente
 - npm start
 - CTRL + C encerrar servidor
+
+
+---
+
+## 📁 Estrutura Recomendada do Repositório
+
+```bash
+├── .elasticbeanstalk/
+├── app/
+│   └── index.js
+├── .gitignore
+├── package.json
+├── README.md  ← este arquivo
+└── template.yaml  ← (opcional) IaC com AWS SAM ou CloudFormation
 
