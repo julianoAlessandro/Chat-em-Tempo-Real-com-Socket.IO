@@ -1,15 +1,7 @@
 
 # 🌐 Deploy de Aplicação na AWS com Cloud9
 
-## 👥 Integrantes da Atividade
 
-1. Gabriel Almir  
-2. Gustavo  
-3. Celso  
-4. Pamela  
-5. Juliano  
-
----
 
 ## 📘 Atividade Avaliativa Final – Deploy de Aplicação no AWS Learner Lab
 
