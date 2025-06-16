@@ -37,7 +37,7 @@ A partir do AWS Cloud9, as seguintes práticas foram executadas:
   - Instruções de **Deploy**
   - Instruções de **Cleanup** (remoção dos recursos após uso)
 
-  ## Diagrama da Solução 💡
+  ## 💡 Diagrama da Solução 
   
 O diagrama representa uma solução de deploy de aplicação na nuvem utilizando serviços da AWS. O processo começa com o código sendo versionado com Git e enviado para o GitHub. Em seguida, o repositório é clonado no ambiente de desenvolvimento Cloud9 da AWS, onde a aplicação é conteinerizada com Docker. Esse container é então implantado no AWS Elastic Beanstalk, que gerencia a infraestrutura e utiliza uma instância EC2 para executar a aplicação. Por fim, a aplicação se torna acessível ao usuário final por meio de um navegador web.
 
